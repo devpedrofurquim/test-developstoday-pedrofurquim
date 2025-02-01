@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Models Filter App (Next.js)
 
-## Getting Started
+This is a **Next.js** application that allows users to filter car models based on vehicle make and model year. It fetches data from the **VPIC API** and presents it in a user-friendly interface with pagination.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+✅ Fetch vehicle makes & models dynamically  
+✅ Responsive design using **Tailwind CSS**  
+✅ Environment variables for API configuration  
+✅ **Pagination** for a better browsing experience  
+✅ **Reusable components** (`Navbar`, `ModelsFetcher`, `MalesFetcher`.)  
+✅ **Next.js Suspense for smooth data fetching**  
+✅ **Error handling & retry mechanism**
+✅ **Optimized with Static Site Generation (SSG) using `generateStaticParams()`**
+
+---
+
+## Installation & Setup
+
+### **1️⃣ Clone the Repository**
+
+```sh
+git clone https://github.com/your-repo/your-project.git
+cd your-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configure Environment Variables
 
-## Learn More
+Create a .env.local file in the root directory and add the following
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+NEXT_PUBLIC_API_BASE_URL=https://vpic.nhtsa.dot.gov/api/vehicles
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running & Building the Application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run dev
+```
 
-## Deploy on Vercel
+## Build for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Architecture Overview
+
+### Folder Structure
+
+```sh
+/project
+  ├── src/app               # Next.js App Router
+  │   ├── /components       # Reusable UI components (Navbar, ModelsFetcher, MakesFetcher)
+  │   ├── /page.tsx       # Home Page (Make & Year Selection)
+  │   ├── /results/       # Results Page (Filtered Car Models)
+  ├── /public            # Static assets (icons, images)
+  ├── .env.local         # Environment variables
+```
+
+## Next.js (React Framework)
+
+Tailwind CSS (Styling)
+TypeScript (Static typing)
+VPIC API (Vehicle Data)
+React Suspense (Efficient Data Fetching)
+Next.js App Router (Server-side rendering)
+
+👤 Pedro Furquim - Developer
+🔗 GitHub: [github.com/your-profile](https://github.com/devpedrofurquim)
