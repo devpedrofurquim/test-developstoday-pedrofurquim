@@ -84,6 +84,7 @@ export default function ModelsFetcher({
           `No models found for ${decodeURIComponent(makeName)} in ${year}`
         );
       }
+      setLoading(false);
     } catch (err: unknown) {
       console.error('Error fetching models:', err);
 
