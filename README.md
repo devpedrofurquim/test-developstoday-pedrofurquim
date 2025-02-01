@@ -4,6 +4,14 @@ This is a **Next.js** application that allows users to filter car models based o
 
 ---
 
+## 📌 Demo
+
+### **🎥 Full Walkthrough**
+
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.loom.com/embed/81006d88f6b843b6b466c66ee3689cb6?sid=4951673b-30a6-4f8f-9913-5538f94ff15d)
+
+---
+
 ## Features
 
 ✅ Fetch vehicle makes & models dynamically  
