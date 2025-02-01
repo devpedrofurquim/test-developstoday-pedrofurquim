@@ -67,8 +67,8 @@ export default function ModelsFetcher({
       }
 
       if (data.Results.length > 0) {
-        let uniqueModels: Model[] = [];
-        let modelIds = new Set<string>();
+        const uniqueModels: Model[] = [];
+        const modelIds = new Set<string>();
 
         data.Results.forEach((result: Model) => {
           if (result.Model_ID && !modelIds.has(result.Model_ID)) {
@@ -84,11 +84,14 @@ export default function ModelsFetcher({
           `No models found for ${decodeURIComponent(makeName)} in ${year}`
         );
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Error fetching models:', err);
-      setError(err.message || 'An unknown error occurred.');
-    } finally {
-      setLoading(false);
+
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unknown error occurred.');
+      }
     }
   };
 

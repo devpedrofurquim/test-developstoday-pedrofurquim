@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaCar, FaCalendarAlt } from 'react-icons/fa';
 
-interface Make {
+export interface Make {
   MakeId: number;
   MakeName: string;
 }
@@ -38,14 +38,19 @@ export default function MakesFetcher() {
         }
 
         setMakes(
-          data.Results.map((make: any) => ({
+          data.Results.map((make: Make) => ({
             MakeId: make.MakeId,
             MakeName: make.MakeName,
           }))
         );
-      } catch (err: any) {
-        console.error('Error fetching makes:', err);
-        setError(err.message || 'An unknown error occurred.');
+      } catch (err: unknown) {
+        console.error('Error fetching models:', err);
+
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred.');
+        }
       }
     };
 

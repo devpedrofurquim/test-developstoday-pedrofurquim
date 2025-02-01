@@ -1,3 +1,5 @@
+import { Make } from '@/app/components/MakesFetcher';
+
 // ✅ Enable Static Generation with Dynamic Routes
 export async function generateStaticParams() {
   const res = await fetch(
@@ -5,7 +7,7 @@ export async function generateStaticParams() {
   );
   const data = await res.json();
 
-  const makes = data.Results.map((make: any) => make.MakeName);
+  const makes = data.Results.map((make: Make) => make.MakeName);
 
   const currentYear = new Date().getFullYear();
   const modelYears = Array.from({ length: currentYear - 2014 }, (_, i) =>
