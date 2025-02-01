@@ -75,4 +75,4 @@ React Suspense (Efficient Data Fetching)
 Next.js App Router (Server-side rendering)
 
 👤 Pedro Furquim - Developer
-🔗 GitHub: [github.com/your-profile](https://github.com/devpedrofurquim)
+🔗 GitHub: [github.com/devpedrofurquim](https://github.com/devpedrofurquim)
