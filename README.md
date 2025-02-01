@@ -8,7 +8,7 @@ This is a **Next.js** application that allows users to filter car models based o
 ✅ Responsive design using **Tailwind CSS**  
 ✅ Environment variables for API configuration  
 ✅ **Pagination** for a better browsing experience  
-✅ **Reusable components** (`Navbar`, `ModelsFetcher`, `MalesFetcher`.)  
+✅ **Reusable components** (`Navbar`, `ModelsFetcher`, `MalesFetcher`.)
 ✅ **Next.js Suspense for smooth data fetching**  
 ✅ **Error handling & retry mechanism**
 ✅ **Optimized with Static Site Generation (SSG) using `generateStaticParams()`**
